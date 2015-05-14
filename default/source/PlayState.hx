@@ -1,8 +1,10 @@
 package;
 
 import flixel.FlxState;
+import interactable.InteractableObject;
+import interactable.Door;
 import weapon.Weapon;
-
+import ui.Hud;
 
 /**
  * A FlxState which can be used for the actual gameplay.
@@ -12,6 +14,7 @@ class PlayState extends FlxState
 
 	private var _interactableObject: InteractableObject;
 	private var _weapon: Weapon;
+	private var _hud: Hud;
 
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -19,7 +22,13 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		// Create the current interactable object
-		var level: int = _getCurrentLevel();
+		_interactableObject = new Door();
+		_weapon = new Weapon();
+		_hud = new Hud();
+
+		add(_interactableObject);
+		add(_weapon);
+		add(_hud);
 
 		super.create();
 	}

@@ -1,23 +1,28 @@
 package interactable;
 
-class InteractableObject {
+import flixel.group.FlxGroup;
+import flixel.FlxSprite;
 
-	private var _level: int;
+class InteractableObject extends FlxGroup {
+
+	private var _level: Int;
 	private var _id: String;
+	private var _asset: FlxSprite;
 
 	public function new() {
+		super();
 		createAssets();
 		setupLevel();
 		setupInput();
 	}
 
-	override protected function createAssets() {
+	function createAssets() {
 	}
 
-	override protected function setupLevel() {
+	function setupLevel() {
 	}
 
-	override protected function setupInput() {
+	function setupInput() {
 	}
 
 }

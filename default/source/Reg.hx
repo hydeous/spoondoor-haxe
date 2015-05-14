@@ -10,6 +10,16 @@ import flixel.util.FlxSave;
 class Reg
 {
 	/**
+	 * Doors go here.
+	 */
+	public static inline var DOOR: String = "images/door.png";
+
+	/**
+	 * Weapons go here.
+	 */
+	public static inline var SPOON: String = "images/spoon.png";
+
+	/**
 	 * Generic levels Array that can be used for cross-state stuff.
 	 * Example usage: Storing the levels of a platformer.
 	 */
