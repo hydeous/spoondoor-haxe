@@ -5,24 +5,35 @@ import flixel.FlxSprite;
 
 class InteractableObject extends FlxGroup {
 
-	private var _level: Int;
-	private var _id: String;
-	private var _asset: FlxSprite;
+	var _level: Int;
+	var _id: String;
+	var _asset: FlxSprite;
+
+	var _hitpoints: Int;
+	var _type: String;
 
 	public function new() {
 		super();
-		createAssets();
-		setupLevel();
-		setupInput();
+		_createAssets();
+		_setupLevel();
 	}
 
-	function createAssets() {
+	public function takeHit() {
+		_animate();
+		_calculateDamage();
 	}
 
-	function setupLevel() {
+	function _calculateDamage() {
+		_hitpoints--;
 	}
 
-	function setupInput() {
+	function _animate() {
 	}
 
+	function _createAssets() {
+	}
+
+	function _setupLevel() {
+		_hitpoints = 100;
+	}
 }

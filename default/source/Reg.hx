@@ -13,6 +13,7 @@ class Reg
 	 * Doors go here.
 	 */
 	public static inline var DOOR: String = "images/door.png";
+	public static inline var SLASH_ANIM: String = "images/slash_anim.png";
 
 	/**
 	 * Weapons go here.

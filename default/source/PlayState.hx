@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxState;
+import flixel.FlxG;
 import interactable.InteractableObject;
 import interactable.Door;
 import weapon.Weapon;
@@ -47,6 +48,12 @@ class PlayState extends FlxState
 	 */
 	override public function update():Void
 	{
+		if (FlxG.touches.justReleased().length > 0) {
+				_interactableObject.takeHit();
+				_weapon.use();
+				_hud.updateHud(_)
+		}
+
 		super.update();
-	}	
+	}
 }

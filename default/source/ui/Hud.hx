@@ -2,8 +2,8 @@ package ui;
 
 import flixel.FlxSprite;
 import flixel.text.FlxText;
-import flixel.FlxG;
 import flixel.group.FlxGroup;
+import flixel.FlxG;
 
 class Hud extends FlxGroup {
 
