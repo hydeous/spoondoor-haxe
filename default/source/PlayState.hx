@@ -49,9 +49,14 @@ class PlayState extends FlxState
 	override public function update():Void
 	{
 		if (FlxG.touches.justReleased().length > 0) {
-				_interactableObject.takeHit();
-				_weapon.use();
-				_hud.updateHud(_)
+			_weapon.use();
+			var hitpoints: Int = _interactableObject.takeHit();
+			if (hitpoints < 0) {
+				//set up next level
+				_interactableObject.removeObject(true);
+			}
+			_hud.updateHitpoints(hitpoints);
+
 		}
 
 		super.update();
